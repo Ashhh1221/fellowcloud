@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A Little Matcha For You 🍵</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <!-- BACKGROUND DECORATIONS -->
+    <div class="background-decoration">
+
+        <span class="star star1">✦</span>
+        <span class="star star2">✧</span>
+        <span class="star star3">✦</span>
+        <span class="star star4">✧</span>
+        <span class="star star5">✦</span>
+
+        <span class="floating-heart heart1">♡</span>
+        <span class="floating-heart heart2">♡</span>
+
+    </div>
+
+
+    <!-- MAIN CONTAINER -->
+    <main class="main-container">
+
+        <!-- TOP LABEL -->
+        <div class="top-label">
+            <span>✿ A LITTLE SOMETHING FOR YOU ✿</span>
+        </div>
+
+
+        <!-- CONTENT -->
+        <section class="welcome-section" id="welcomeSection">
+
+            <!-- IMAGE -->
+            <div class="photo-wrapper">
+
+                <div class="photo-frame">
+
+                    <img
+                        src="M1.png"
+                        alt="A special picture"
+                        class="main-photo"
+                    >
+
+                </div>
+
+                <div class="photo-decoration">
+                    ♡ made with matcha ♡
+                </div>
+
+            </div>
+
+
+            <!-- GREETING -->
+            <div class="greeting">
+
+                <div class="small-tag">
+                    HEY YOU! ♡
+                </div>
+
+                <h1>
+                    Sawasdee, khon suay!
+                </h1>
+
+                <p>
+                    how's your little heart feeling today?
+                </p>
+
+            </div>
+
+
+            <!-- BUTTONS -->
+            <div class="mood-buttons">
+
+                <button
+                    class="mood-btn happy-btn"
+                    onclick="chooseMood('happy')"
+                >
+                    <span class="btn-emoji">🌷</span>
+                    <span>happy!</span>
+                </button>
+
+
+                <button
+                    class="mood-btn tired-btn"
+                    onclick="chooseMood('tired')"
+                >
+                    <span class="btn-emoji">☁️</span>
+                    <span>a little tired...</span>
+                </button>
+
+            </div>
+
+
+            <!-- BOTTOM TEXT -->
+            <div class="bottom-message">
+                <span>✧ there's no wrong answer, okay? ✧</span>
+            </div>
+
+        </section>
+
+
+        <!-- MESSAGE SECTION -->
+        <section class="message-section hidden" id="messageSection">
+
+            <div class="message-icon" id="messageIcon">
+                🍵
+            </div>
+
+            <div class="message-tag">
+                A LITTLE NOTE FOR YOU ♡
+            </div>
+
+            <h2 id="messageTitle">
+                hey, you!
+            </h2>
+
+            <p id="messageText">
+                You're doing amazing.
+            </p>
+
+            <div class="matcha-divider">
+                ✦ 🍵 ✦
+            </div>
+
+            <button class="continue-btn" onclick="goToNotes()">
+                <span>one more little thing</span>
+                <span>♡</span>
+            </button>
+
+            <button class="back-btn" onclick="goBack()">
+                ← go back
+            </button>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer>
+            made with ♡ and a little matcha
+        </footer>
+
+    </main>
+
+
+    <!-- FLOATING MATCHA ANIMATION -->
+    <div id="matchaAnimation"></div>
+
+
+    <script src="index.js"></script>
+
+</body>
+</html>

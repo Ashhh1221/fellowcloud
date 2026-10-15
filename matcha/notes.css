@@ -1,0 +1,858 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+/* =========================================
+   SOFT PINK RETRO NOTEPAD
+   MATCHA LOVE WEBSITE
+========================================= */
+
+
+/* =========================================
+   COLOR VARIABLES
+========================================= */
+
+:root {
+
+    --pink-bg: #fff6f9;
+
+    --pink-frame: #f9dfe9;
+
+    --pink-menu: #e9a9bf;
+
+    --pink-border: #f6dce6;
+
+    --pink-dark: #c9829c;
+
+    --matcha: #8fa77a;
+
+    --matcha-dark: #617a55;
+
+    --paper: #ffffff;
+
+    --text: #292929;
+
+}
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    min-height: 100dvh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 40px 18px;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            #ffffff 0%,
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 80% 80%,
+            #f9e7ee 0%,
+            transparent 40%
+        ),
+
+        linear-gradient(
+            135deg,
+            #dce9cf,
+            #f4f5e7,
+            #f9e6ec
+        );
+
+     font-family: 'Press Start 2P', monospace;
+
+     color: var(--text);
+
+     overflow-x: hidden;
+
+}
+
+
+/* =========================================
+   BACKGROUND DECORATIONS
+========================================= */
+
+.background-decor {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 0;
+
+}
+
+
+.decor {
+
+    position: absolute;
+
+    color: #e6b5c6;
+
+    font-size: 25px;
+
+}
+
+
+.decor1 {
+
+    top: 12%;
+
+    left: 8%;
+
+}
+
+
+.decor2 {
+
+    top: 20%;
+
+    right: 10%;
+
+}
+
+
+.decor3 {
+
+    bottom: 15%;
+
+    left: 12%;
+
+}
+
+
+.decor4 {
+
+    bottom: 20%;
+
+    right: 8%;
+
+}
+
+
+.decor5 {
+
+    top: 60%;
+
+    right: 5%;
+
+}
+
+
+/* =========================================
+   NOTEPAD WINDOW
+========================================= */
+
+
+.notepad-window {
+    position: relative;
+    z-index: 1;
+
+    width: 900px;
+    max-width: 100%;
+
+    background:
+    radial-gradient(
+        circle at 20% 20%,
+        rgba(255, 255, 255, 0.75) 0%,
+        transparent 35%
+    ),
+
+    radial-gradient(
+        circle at 80% 80%,
+        rgba(240, 195, 213, 0.55) 0%,
+        transparent 40%
+    ),
+
+    linear-gradient(
+        135deg,
+        #cbdcb9,
+        #e8ebd9,
+        #f2d7e2
+    );
+    border-radius: 28px;
+    padding: 14px;
+
+    box-shadow: 0 15px 45px rgba(206, 146, 167, 0.12);
+}
+
+
+
+/* =========================================
+   WINDOW HEADER
+========================================= */
+
+.window-header {
+
+    height: 58px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 18px;
+
+}
+
+
+.window-title {
+
+    font-family: 'Press Start 2P', monospace;
+
+    font-size: 25px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    color: #292929;
+
+}
+
+
+.window-controls {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+}
+
+
+.control {
+
+    width: 15px;
+
+    height: 15px;
+
+    border-radius: 50%;
+
+}
+
+
+.control.pink {
+
+    background: #e7a5bf;
+
+}
+
+
+.control.purple {
+
+    background: #a27892;
+
+}
+
+
+.control.brown {
+
+    background: #bd8b8e;
+
+}
+
+
+/* =========================================
+   NOTEPAD BODY
+========================================= */
+
+.notepad-body {
+
+    background: var(--paper);
+
+    border-radius: 2px 2px 24px 24px;
+
+    overflow: hidden;
+
+}
+
+
+/* =========================================
+   MENU BAR
+========================================= */
+
+.menu-bar {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    margin: 10px;
+
+    padding: 5px 12px;
+
+    background: var(--pink-menu);
+
+    color: white;
+
+    font-size: 21px;
+
+    letter-spacing: 1px;
+
+    white-space: nowrap;
+
+}
+
+
+.menu-bar span {
+
+    cursor: default;
+
+}
+
+
+.close-menu {
+
+    margin-left: auto;
+
+    font-family: Arial, sans-serif;
+
+}
+
+
+/* =========================================
+   NOTE INFORMATION
+========================================= */
+
+.note-info {
+
+    padding: 0 12px;
+
+    border-bottom: 3px solid var(--pink-border);
+
+}
+
+
+.info-row {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    min-height: 52px;
+
+    padding: 8px 0;
+
+    font-size: 21px;
+
+    border-bottom: 2px solid #f9e9ee;
+
+}
+
+
+.info-row:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.info-label {
+
+    min-width: 75px;
+
+}
+
+
+.separator {
+
+    font-size: 22px;
+
+}
+
+
+.info-value {
+
+    flex: 1;
+
+    min-width: 0;
+
+    overflow-wrap: anywhere;
+
+}
+
+
+/* =========================================
+   LETTER CONTENT
+========================================= */
+
+.letter-content {
+
+    padding: 30px 22px 10px;
+
+}
+
+
+.letter-text {
+
+    font-family: 'Press Start 2P', monospace;
+
+    font-size: 22px;
+
+    line-height: 1.95;
+
+    letter-spacing: 0.3px;
+
+    color: #292929;
+
+    overflow-wrap: anywhere;
+
+}
+
+
+/* LETTER PARAGRAPHS */
+
+.letter-text p {
+
+    margin-bottom: 20px;
+
+}
+
+
+.letter-text p:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+/* =========================================
+   LETTER SIGNATURE
+========================================= */
+
+.letter-signature {
+
+    padding: 10px 22px 30px;
+
+    text-align: right;
+
+    opacity: 1;
+
+}
+
+
+.letter-signature p {
+
+    font-family: 'Quicksand', sans-serif;
+
+    font-size: 18px;
+
+    color: #a78b94;
+
+}
+
+
+.letter-signature span {
+
+    display: inline-block;
+
+    font-size: 32px;
+
+    color: #d89aaf;
+
+    margin-top: 5px;
+
+}
+
+
+/* =========================================
+   BOTTOM ACTIONS
+========================================= */
+
+.bottom-actions {
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 18px;
+
+}
+
+
+/* BACK HOME BUTTON */
+
+.home-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 100%;
+
+    padding: 13px 20px;
+
+    border-radius: 25px;
+
+   font-family: 'Press Start 2P', monospace;
+
+    font-size: 19px;
+
+    text-decoration: none;
+
+    background: #e1ecd7;
+
+    border: 2px solid #91ad80;
+
+    color: #5d7750;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+
+.home-btn:hover {
+
+    background: #d2e3c4;
+
+    transform: translateY(-2px);
+
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.notepad-footer {
+
+    text-align: center;
+
+    margin-top: 16px;
+
+    margin-bottom: 4px;
+
+    font-size: 16px;
+
+    color: #b78398;
+
+}
+
+
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+    body {
+
+        padding: 30px 15px;
+
+    }
+
+
+    .notepad-window {
+
+        max-width: 520px;
+
+    }
+
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+
+    body {
+
+        padding: 20px 12px;
+
+        align-items: flex-start;
+
+    }
+
+
+    .notepad-window {
+
+        border-radius: 28px;
+
+        padding: 10px;
+
+    }
+
+
+    /* HEADER */
+
+    .window-header {
+
+        height: 55px;
+
+        padding: 0 12px;
+
+    }
+
+
+    .window-title {
+
+        font-size: 22px;
+
+        letter-spacing: 2px;
+
+    }
+
+
+    .window-controls {
+
+        gap: 6px;
+
+    }
+
+
+    .control {
+
+        width: 12px;
+
+        height: 12px;
+
+    }
+
+
+    /* MENU BAR */
+
+    .menu-bar {
+
+        gap: 15px;
+
+        font-size: 17px;
+
+        padding: 6px 8px;
+
+        margin: 8px;
+
+        letter-spacing: 0;
+
+    }
+
+
+    /* NOTE INFORMATION */
+
+    .note-info {
+
+        padding: 0 10px;
+
+    }
+
+
+    .info-row {
+
+        gap: 10px;
+
+        font-size: 18px;
+
+        min-height: 48px;
+
+    }
+
+
+    .info-label {
+
+        min-width: 65px;
+
+    }
+
+
+    /* LETTER */
+
+    .letter-content {
+
+        padding: 25px 16px 10px;
+
+    }
+
+
+    .letter-text {
+
+        font-size: 20px;
+
+        line-height: 1.85;
+
+    }
+
+
+    .letter-text p {
+
+        margin-bottom: 18px;
+
+    }
+
+
+    /* SIGNATURE */
+
+    .letter-signature {
+
+        padding: 10px 16px 25px;
+
+    }
+
+
+    .letter-signature p {
+
+        font-size: 17px;
+
+    }
+
+
+    /* BUTTON */
+
+    .home-btn {
+
+        font-size: 18px;
+
+    }
+
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 360px) {
+
+    body {
+
+        padding: 15px 8px;
+
+    }
+
+
+    .notepad-window {
+
+        padding: 8px;
+
+        border-radius: 24px;
+
+    }
+
+
+    .window-title {
+
+        font-size: 19px;
+
+    }
+
+
+    .menu-bar {
+
+        gap: 8px;
+
+        font-size: 15px;
+
+        padding: 6px;
+
+    }
+
+
+    .info-row {
+
+        font-size: 16px;
+
+        gap: 8px;
+
+    }
+
+
+    .info-label {
+
+        min-width: 58px;
+
+    }
+
+
+    .letter-content {
+
+        padding: 20px 12px 10px;
+
+    }
+
+
+    .letter-text {
+
+        font-size: 18px;
+
+        line-height: 1.8;
+
+    }
+
+}
+
+
+/* =========================================
+   LANDSCAPE NOTEPAD LAYOUT
+========================================= */
+
+@media (min-width: 769px) {
+
+    body {
+        padding: 30px;
+    }
+
+    .notepad-window {
+        width: 900px;
+        max-width: 100%;
+    }
+
+    .letter-content {
+        padding: 25px 30px 10px;
+    }
+
+    .letter-text {
+        font-size: 23px;
+        line-height: 1.8;
+    }
+
+    .note-info {
+        padding: 0 20px;
+    }
+
+}

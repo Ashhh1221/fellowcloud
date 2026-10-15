@@ -1,0 +1,875 @@
+/* ========================================
+   MATCHA LOVE WEBSITE
+   RETRO PIXEL + SOFT KAWAII THEME
+======================================== */
+
+
+/* COLORS */
+
+:root {
+
+    --matcha-dark: #4f6742;
+    --matcha: #8fa77a;
+    --matcha-light: #c7d9b4;
+
+    --cream: #fffdf5;
+    --cream-dark: #f5f1e4;
+
+    --pink: #f4c8d5;
+    --pink-light: #ffe5ed;
+
+    --text: #4c5845;
+
+    --border: #78936b;
+
+}
+
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    font-family: 'DM Sans', sans-serif;
+
+    color: var(--text);
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            #ffffff 0%,
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 80% 80%,
+            #f9e7ee 0%,
+            transparent 40%
+        ),
+
+        linear-gradient(
+            135deg,
+            #dce9cf,
+            #f4f5e7,
+            #f9e6ec
+        );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 35px 16px;
+
+    overflow-x: hidden;
+
+}
+
+
+/* ========================================
+   BACKGROUND STARS
+======================================== */
+
+.background-decoration {
+
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+    overflow: hidden;
+
+    z-index: 0;
+
+}
+
+
+.star {
+
+    position: absolute;
+
+    color: #91ad7e;
+
+    font-size: 24px;
+
+    animation: sparkle 3s infinite ease-in-out;
+
+}
+
+
+.star1 {
+    top: 10%;
+    left: 10%;
+}
+
+.star2 {
+    top: 22%;
+    right: 12%;
+    animation-delay: .5s;
+}
+
+.star3 {
+    bottom: 15%;
+    left: 8%;
+    animation-delay: 1s;
+}
+
+.star4 {
+    bottom: 20%;
+    right: 10%;
+    animation-delay: 1.5s;
+}
+
+.star5 {
+    top: 50%;
+    left: 5%;
+    animation-delay: 2s;
+}
+
+
+@keyframes sparkle {
+
+    0%, 100% {
+        opacity: .3;
+        transform: scale(.8) rotate(0deg);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2) rotate(20deg);
+    }
+
+}
+
+
+/* HEARTS */
+
+.floating-heart {
+
+    position: absolute;
+
+    font-size: 30px;
+
+    color: #e5a8bd;
+
+    animation: floatHeart 5s infinite ease-in-out;
+
+}
+
+
+.heart1 {
+    top: 15%;
+    right: 5%;
+}
+
+.heart2 {
+    bottom: 12%;
+    left: 12%;
+    animation-delay: 2s;
+}
+
+
+@keyframes floatHeart {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+}
+
+
+/* ========================================
+   MAIN CARD
+======================================== */
+
+.main-container {
+
+    position: relative;
+
+    z-index: 1;
+
+    width: 100%;
+    max-width: 480px;
+
+    background: rgba(255,253,245,.95);
+
+    border: 3px solid var(--border);
+
+    border-radius: 22px;
+
+    box-shadow:
+        7px 7px 0 #a6bb97,
+        0 15px 50px rgba(76,88,69,.08);
+
+    padding: 25px 24px 22px;
+
+    text-align: center;
+
+}
+
+
+/* ========================================
+   TOP LABEL
+======================================== */
+
+.top-label {
+
+    margin-bottom: 30px;
+
+}
+
+
+.top-label span {
+
+    font-family: 'Press Start 2P', monospace;
+
+    font-size: 8px;
+
+    color: var(--matcha-dark);
+
+    letter-spacing: 1px;
+
+    line-height: 2;
+
+}
+
+
+/* ========================================
+   IMAGE
+======================================== */
+
+.photo-wrapper {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: 28px;
+
+}
+
+
+.photo-frame {
+
+    width: 200px;
+    height: 240px;
+
+    padding: 7px;
+
+    background: #fff;
+
+    border: 3px solid var(--matcha-dark);
+
+    border-radius: 10px;
+
+    box-shadow: 6px 6px 0 #c7d9b4;
+
+    transform: rotate(-2deg);
+
+    transition: .3s;
+
+}
+
+
+.photo-frame:hover {
+
+    transform: rotate(0deg) scale(1.03);
+
+}
+
+
+.main-photo {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 4px;
+
+}
+
+
+.photo-decoration {
+
+    margin-top: 17px;
+
+    font-family: 'Press Start 2P', monospace;
+
+    font-size: 7px;
+
+    color: #a0ae91;
+
+}
+
+
+/* ========================================
+   GREETING
+======================================== */
+
+.greeting {
+
+    margin-bottom: 30px;
+
+}
+
+
+.small-tag {
+
+    display: inline-block;
+
+    background: var(--pink-light);
+
+    color: #a86e83;
+
+    padding: 9px 14px;
+
+    border-radius: 30px;
+
+    font-family: 'Press Start 2P', monospace;
+
+    font-size: 8px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.greeting h1 {
+
+    font-family: 'Press Start 2P', monospace;
+
+    font-size: 15px;
+
+    line-height: 2;
+
+    color: var(--matcha-dark);
+
+    margin-bottom: 14px;
+
+}
+
+
+.greeting p {
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    color: #79836f;
+
+}
+
+
+/* ========================================
+   MOOD BUTTONS
+======================================== */
+
+.mood-buttons {
+
+    display: flex;
+
+    gap: 12px;
+
+    justify-content: center;
+
+    margin-bottom: 28px;
+
+}
+
+
+.mood-btn {
+
+    flex: 1;
+
+    border: 2px solid var(--matcha-dark);
+
+    border-radius: 50px;
+
+    padding: 15px 10px;
+
+    font-family: 'DM Sans', sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    transition: .25s;
+
+    box-shadow: 3px 4px 0 #b7c8a7;
+
+}
+
+
+.happy-btn {
+
+    background: linear-gradient(
+        135deg,
+        #f6dce5,
+        #fffafc
+    );
+
+    color: #8e6274;
+
+}
+
+
+.tired-btn {
+
+    background: linear-gradient(
+        135deg,
+        #d6e6c9,
+        #f8fff3
+    );
+
+    color: #58734d;
+
+}
+
+
+.mood-btn:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow: 3px 7px 0 #b7c8a7;
+
+}
+
+
+.mood-btn:active {
+
+    transform: translateY(3px);
+
+    box-shadow: none;
+
+}
+
+
+.btn-emoji {
+
+    font-size: 20px;
+
+}
+
+
+/* ========================================
+   BOTTOM MESSAGE
+======================================== */
+
+.bottom-message {
+
+    font-size: 11px;
+
+    color: #a0a996;
+
+    font-style: italic;
+
+}
+
+
+/* ========================================
+   MESSAGE SECTION
+======================================== */
+
+.hidden {
+
+    display: none !important;
+
+}
+
+
+.message-section {
+
+    padding: 35px 5px;
+
+    animation: fadeUp .6s ease;
+
+}
+
+
+.message-icon {
+
+    font-size: 65px;
+
+    margin-bottom: 25px;
+
+    animation: matchaBounce 2s infinite;
+
+}
+
+
+@keyframes matchaBounce {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+}
+
+
+.message-tag {
+
+    font-family: 'Press Start 2P', monospace;
+
+    font-size: 8px;
+
+    color: #a48c9b;
+
+    margin-bottom: 22px;
+
+    line-height: 2;
+
+}
+
+
+.message-section h2 {
+
+    font-family: 'Press Start 2P', monospace;
+
+    font-size: 15px;
+
+    line-height: 2;
+
+    color: var(--matcha-dark);
+
+    margin-bottom: 20px;
+
+}
+
+
+.message-section p {
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+    color: #77846e;
+
+    margin-bottom: 25px;
+
+}
+
+
+.matcha-divider {
+
+    color: #9bb68a;
+
+    font-size: 18px;
+
+    margin-bottom: 30px;
+
+}
+
+
+/* CONTINUE BUTTON */
+
+.continue-btn {
+
+    width: 100%;
+
+    padding: 18px;
+
+    border-radius: 50px;
+
+    border: 2px solid var(--matcha-dark);
+
+    background: linear-gradient(
+        135deg,
+        #f5cbd9,
+        #fff9fb
+    );
+
+    color: #7d5e6d;
+
+    font-family: 'Press Start 2P', monospace;
+
+    font-size: 9px;
+
+    line-height: 1.8;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    box-shadow: 4px 5px 0 #c8d7ba;
+
+    transition: .3s;
+
+}
+
+
+.continue-btn:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow: 4px 8px 0 #c8d7ba;
+
+}
+
+
+/* BACK BUTTON */
+
+.back-btn {
+
+    margin-top: 25px;
+
+    border: none;
+    background: none;
+
+    font-size: 12px;
+
+    color: #9ca995;
+
+    cursor: pointer;
+
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+
+    margin-top: 35px;
+
+    font-size: 10px;
+
+    color: #a5ae9b;
+
+    letter-spacing: .5px;
+
+}
+
+
+/* ========================================
+   FLOATING MATCHA
+======================================== */
+
+#matchaAnimation {
+
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 100;
+
+    overflow: hidden;
+
+}
+
+
+.matcha-particle {
+
+    position: absolute;
+
+    bottom: -80px;
+
+    font-size: 35px;
+
+    animation: matchaFloat 2.5s ease-out forwards;
+
+}
+
+
+@keyframes matchaFloat {
+
+    0% {
+
+        transform: translateY(0) rotate(0deg) scale(.5);
+        opacity: 0;
+
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+
+        transform: translateY(-110vh) rotate(360deg) scale(1.3);
+        opacity: 0;
+
+    }
+
+}
+
+
+/* ========================================
+   TRANSITIONS
+======================================== */
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+        transform: translateY(25px);
+
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* ========================================
+   MOBILE RESPONSIVE
+======================================== */
+
+@media (max-width: 480px) {
+
+    body {
+
+        padding: 20px 14px;
+
+    }
+
+
+    .main-container {
+
+        padding: 25px 18px;
+
+        border-radius: 18px;
+
+        box-shadow: 5px 5px 0 #a6bb97;
+
+    }
+
+
+    .top-label {
+
+        margin-bottom: 25px;
+
+    }
+
+
+    .photo-frame {
+
+        width: 175px;
+        height: 215px;
+
+    }
+
+
+    .greeting h1 {
+
+        font-size: 12px;
+
+    }
+
+
+    .greeting p {
+
+        font-size: 14px;
+
+    }
+
+
+    .mood-buttons {
+
+        flex-direction: column;
+
+        gap: 14px;
+
+    }
+
+
+    .mood-btn {
+
+        width: 100%;
+
+        padding: 15px;
+
+    }
+
+
+    .message-section h2 {
+
+        font-size: 12px;
+
+    }
+
+}
+
+
+/* SMALL PHONES */
+
+@media (max-width: 360px) {
+
+    .main-container {
+
+        padding: 20px 14px;
+
+    }
+
+
+    .photo-frame {
+
+        width: 155px;
+        height: 190px;
+
+    }
+
+
+    .greeting h1 {
+
+        font-size: 11px;
+
+    }
+
+}
+
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+
+    }
+
+}
